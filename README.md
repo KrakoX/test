@@ -1,2 +1,1 @@
-# Demo
-Welcome!
+# Secret event-generator
