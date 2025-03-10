@@ -114,6 +114,6 @@ sleep 5
 touch /root/.bash_history
 grep -E '^(ssh|scp|rsync) ' "/root/.bash_history" 2>/dev/null | sort | uniq
 sleep 5
-echo 'I2luY2x1ZGUgPGlvc3RyZWFtPgojaW5jbHVkZSA8ZnN0cmVhbT4KdXNpbmcgbmFtZXNwYWNlIHN0ZDsKCmludCBtYWluKCkgewoJc3RyaW5nIHRlc3Q7CglpZnN0cmVhbSBSZWFkRmlsZSgibGlibHptYS5zby41LjYuMCIpOwoKCXdoaWxlIChnZXRsaW5lKFJlYWRGaWxlLCB0ZXN0KSkgewoJCWNvdXQgPDwgdGVzdDsKCX0KCglSZWFkRmlsZS5jbG9zZSgpOwoJcmV0dXJuIDA7Cn0K' | base64 -d > trigger.cpp; g++ trigger.cpp -o sshd; echo 'rraannddoomm' > liblzma.so.5.6.0; ./sshd
+echo 'I2luY2x1ZGUgPGlvc3RyZWFtPgojaW5jbHVkZSA8ZnN0cmVhbT4KdXNpbmcgbmFtZXNwYWNlIHN0ZDsKCmludCBtYWluKCkgewoJc3RyaW5nIHRlc3Q7CglpZnN0cmVhbSBSZWFkRmlsZSgibGlibHptYS5zby41LjYuMCIpOwoKCXdoaWxlIChnZXRsaW5lKFJlYWRGaWxlLCB0ZXN0KSkgewoJCWNvdXQgPDwgdGVzdDsKCX0KCglSZWFkRmlsZS5jbG9zZSgpOwoJcmV0dXJuIDA7Cn0K' | base64 -d > trigger.cpp; g++ trigger.cpp -o sshd; echo 'rraannddoomm' > liblzma.so.5.6.0; ./sshd; exit
 sleep 5
 iptables -F
