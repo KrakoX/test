@@ -1,7 +1,6 @@
 #!/bin/bash
-
 sleep 5
-dpkg --configure -a; apt update; apt install -y wget curl netcat-openbsd python3 rsync masscan docker-ce strace sudo git python3 pip pipx g++ kmod apache2 php
+dpkg --configure -a; apt update -qq; apt install -y nmap libcap-dev e2fsprogs policykit-1 wget curl netcat-openbsd python3 rsync masscan docker-ce strace sudo git python3 pip pipx g++ kmod apache2 php
 echo "APT COMPLETED" && sleep 5
 cd /tmp
 echo "#I was here" | tee -a /etc/profile
