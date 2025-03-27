@@ -1,6 +1,33 @@
-Dummy data
-  1.
-  2.
-  3.
-  4.
-  5.
+#!/bin/bash
+
+apt update
+apt install strace hping3 net-tools util-linux -y
+
+echo "(T1649) Add system certificates"
+printf "test\n" > /etc/ssl/certs/test1.pem
+
+echo "(T1555) Directory Traversal File Read"
+cat /tmp/../../../../etc/passwd
+
+echo "(T1543) Create files below dev"
+cp /etc/hostname /dev/testfile_cp
+
+echo "(T1059.004) Offensive tool executed in container"
+hping3 -1 -c 4 127.0.0.1
+
+echo "(T1059.004) Create Hardlink Over Sensitive Files"
+ln /etc/passwd /tmp/hardlinktest
+
+echo "(T1622) PTRACE anti-debug attempt"
+strace -e trace=ptrace sleep 1
+
+echo "(T1083) Read environment variable from /proc files"
+grep -a 'PATH' /proc/1/environ
+
+echo "(T1059) Launch Suspicious Network Tool in Container"
+netstat
+
+echo "(T1211) Unprivileged Delegation of Page Faults Handling to a Userspace Process"
+
+echo "(T1611) Namespace change using unshare in container"
+unshare -p -f --mount-proc /bin/bash
